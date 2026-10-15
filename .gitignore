@@ -1,0 +1,13 @@
+
+# Python virtual environments
+rad/
+venv/
+.venv/
+
+# Python generated files
+__pycache__/
+*.py[cod]
+db.sqlite3
+
+# Environment variables and secrets
+.env
