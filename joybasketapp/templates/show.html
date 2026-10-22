@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+{% load static %}
+    <link rel="stylesheet" href="{% static 'static/bootstrap/css/bootstrap.min.css' %}"> 
+    <script src="{% static 'static/bootstrap/js/bootstrap.min.js' %}"></script>
+
+
+</head>
+<body>
+    <h1>Contact Messages</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi corrupti omnis, tempora minus distinctio quibusdam exercitationem commodi corporis minima dicta est velit veniam atque obcaecati. Facilis numquam explicabo corrupti quam.
+    Voluptatibus, sunt nulla esse ducimus, ipsum aliquid amet cupiditate aut, dolores omnis labore. Corrupti dolorem optio eaque magnam praesentium, deleniti, nisi accusantium incidunt cupiditate atque reprehenderit quod, reiciendis est. Voluptatem.
+    Iste omnis iure aperiam mollitia quia et nemo nihil, at praesentium non. Id eius ad, dolorum labore excepturi nobis nesciunt quaerat eaque, vero culpa nemo nostrum laborum recusandae esse sed!</p>
+
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Subject</th>
+                <th>Message</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for contact in all %}
+            <tr>
+                <td>{{ contact.name }}</td>
+                <td>{{ contact.email }}</td>
+                <td>{{ contact.phone }}</td>
+                <td>{{ contact.subject }}</td>
+                <td>{{ contact.message }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
